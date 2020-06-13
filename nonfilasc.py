@@ -13,7 +13,8 @@ def main():
             url = urlparse(line)
             hostname = url.hostname
             path = url.path
-            print(f"{numb} - {line.strip()}: where hostname is {hostname} & path is {path}")
+            if hostname:
+                print(f"{numb} - {line.strip()}: where hostname is {hostname} & path is {path}")
             numb += 1
 
 if __name__ == '__main__':
