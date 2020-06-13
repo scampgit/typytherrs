@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 
+from urllib.parse import urlparse 
+
 #file examples
 
 def main():
     file = "xmp/mtrics"
-    numb = 0
-    for line in open(file):
-        print(f"#{numb}: here the {line}")
-        numb += 1
-
-    print(f"*******\nwe can do:")
+    print(f"read file w/ urls:")
     with open(file) as file_:
         numb = 0
         for line in file_:
-            print(f"gotcha {numb} & {line.strip()}")
+            url = urlparse(line)
+            hostname = url.hostname
+            path = url.path
+            print(f"{numb} - {line.strip()}: where hostname is {hostname} & path is {path}")
             numb += 1
 
 if __name__ == '__main__':
