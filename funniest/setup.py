@@ -1,6 +1,6 @@
 from setuptools import setup
 
-setup(name='funniest',
+setup(name='funni',
       version='0.001',
       description='The funniest j in t wrld',
       url='http://github.com/.../funniest',
